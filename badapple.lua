@@ -1,6 +1,7 @@
 --Bad Apple!! in Minecraft! Made by JamnedZ
 --You'll need at least 1.8 MB to run video only, and 3 MB for video and audio.
 --Use monitor 3x2 with scale 0.5! Or 6x4 with scale 1, I guess
+--GitHub repo: https://github.com/JamElyZEuS/badapple_cctweaked
 
 local video = {}
 local no_video = false
@@ -27,7 +28,7 @@ end
 local function check_files()
     if not fs.exists('badapple.nfpa') then
         print('Video not found! Downloading...')
-        local video_file = download('https://cdn.discordapp.com/attachments/1024373163934634094/1075851512510697472/badapple.nfpa')
+        local video_file = download('https://raw.githubusercontent.com/JamElyZEuS/badapple_cctweaked/main/badapple.nfpa')
         if not video_file then
             printError('Couldn\'t download video.')
             no_video = true
@@ -46,7 +47,7 @@ local function check_files()
 
     if not fs.exists('badapple.dfpwm') and not no_audio then
         print('Music not found! Downloading...')
-        local audio_file = download('https://cdn.discordapp.com/attachments/1024373163934634094/1075851512875581460/badapple.dfpwm')
+        local audio_file = download('https://raw.githubusercontent.com/JamElyZEuS/badapple_cctweaked/main/badapple.dfpwm')
         if not audio_file then
             printError('Couldn\'t download audio.')
             no_audio = true
